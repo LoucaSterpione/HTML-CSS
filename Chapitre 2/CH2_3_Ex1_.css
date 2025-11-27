@@ -1,0 +1,20 @@
+h1{
+    font-family: Arial;
+    font-size: 30px;
+    text-align: left;
+    color: purple;
+ }h2{
+    font-family: Arial;
+    font-size: 27px;
+    text-align: left;
+    color: white;
+} #texte{
+    font-family: Arial;
+    font-size: 32px;
+    color: white;
+} body {
+    background-image:url(c:\Users\Sterpionel\Downloads\pingouin.png),url(c:\Users\Sterpionel\Downloads\feuilles.png) ;
+    background-position: center center,top left ;
+    background-repeat: no-repeat, repeat;
+    background-attachment : fixed, scroll ;
+}    
