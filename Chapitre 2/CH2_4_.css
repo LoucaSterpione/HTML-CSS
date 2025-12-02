@@ -1,0 +1,71 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+}
+
+
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+article {
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    border: 10px dashed orange; 
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: top left;
+    color: #fff;
+}
+
+
+.article1 {
+    background-color: #4144db8e;
+    background-image: url("pingouin.png");
+    background-clip: border-box;
+    background-origin: border-box;
+}
+
+
+.article2 {
+    background-color: #287e2d94;
+    background-image: url("pingouin.png");
+    background-clip: padding-box;
+    background-origin: padding-box;
+}
+
+.article3 {
+    background-color: #7c38ac88;
+    background-image: url("pingouin.png");
+    background-clip: content-box;
+    background-origin: content-box;
+}
+
+a {
+    color: #00f;
+    text-decoration: none;
+}
+cite {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #fff;
+}
+
