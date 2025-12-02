@@ -1,0 +1,127 @@
+
+html, body {
+    margin: 0;
+    padding: 1rem 2rem;
+}
+body {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    text-align: justify;
+    line-height: 12px;
+    counter-reset: section;
+}
+
+h1.titre-principal {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    background-color: #fff8b3;
+    margin: 0 0 10px 0;
+    padding: 8px 12px;
+}
+
+.auteur {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: violet;
+    text-align: center;
+    margin: 0;
+}
+.auteur-un { margin-top: 20px; }
+.auteur-deux { margin-bottom: 20px; }
+
+.paragraphe-intro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-indent: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h2.section {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: blue;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    counter-increment: section;
+}
+h2.section::before { content: counter(section) ". "; }
+
+.de-cette-epoque {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+h3.sous-titre {
+    font-size: 13px;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 12px 0 6px 0;
+}
+
+.paragraphe-standard {
+    text-indent: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.paragraphe-italique {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+    font-style: italic;
+    text-indent: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ul.special-bullets { margin: 10px 0 20px 1.5rem; padding: 0; }
+ul.special-bullets li.bulleted-special {
+    list-style: disc;
+    color: #144b81;
+    margin: 10px 0 20px 0;
+    padding-left: 0;
+    text-indent: 0;
+}
+
+a { color: #0645ad; }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+h1:hover, h2:hover, h3:hover {
+    color: green;
+}
+
+h1:active, h2:active, h3:active {
+    text-decoration: underline;
+}
+
+p {
+    transition: font-style 0.3s;
+}
+
+p:hover {
+    font-style: italic;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+    font-style: inherit;
+}
