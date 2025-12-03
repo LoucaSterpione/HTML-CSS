@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio – [Ton Nom]</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Place ton favicon ici si besoin -->
+</head>
+<body>
+    <!-- HEADER STICKY + NAV -->
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="#accueil">STERPIONE Louca</a>
+            <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="site-nav" role="navigation">
+                <a href="#accueil">Accueil</a>
+                <a href="#about">Qui suis-je ?</a>
+                <a href="#skills">Compétences</a>
+                <a href="#education">Formations</a>
+                <a href="#experience">Expériences</a>
+                <a href="#projects">Projets</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contacts</a>
+                <a href="#veille">Veille</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- HERO / ACCUEIL -->
+    <section id="accueil" class="hero reveal">
+        <div class="hero-content">
+            <h1>Bonjour, je suis STERPIONE Louca</h1>
+            <p class="subtitle">Future Administrateur Réseaux</p>
+            <div class="cta">
+                <a href="#contact" class="btn">Me contacter</a>
+                <a href="#projects" class="btn btn-outline">Voir mes projets</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- QUI SUIS-JE -->
+    <section id="about" class="about section reveal">
+        <h2>Qui suis-je ?</h2>
+        <div class="about-grid">
+            <!-- Remplace images/photo.jpg par ta photo -->
+            <img class="about-photo" src="unnamed.jpg" alt="Photo de profil">
+            <div class="about-text">
+                <p>Je me nomme STERPIONE Louca, j'ai 18 ans</p>
+                <ul class="about-stats">
+                    <li><strong>5+</strong> projets personnels</li>
+                    <li><strong>2</strong> stages réalisés</li>
+                    <li><strong>100%</strong> motivation</li>
+                </ul>
+                <div class="about-actions">
+                    <!-- Remplace cv.pdf par ton fichier -->
+                    <a href="cv.pdf" class="btn" download>Télécharger mon CV</a>
+                    <button id="copyEmail" class="btn btn-outline" type="button">Copier mon email</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- COMPÉTENCES -->
+    <section id="skills" class="skills section reveal">
+        <h2>Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill"><img src="icons/html.png" alt="HTML"><p>HTML</p></div>
+            <div class="skill"><img src="icons/css.png" alt="CSS"><p>CSS</p></div>
+            <div class="skill"><img src="icons/js.png" alt="JavaScript"><p>JavaScript</p></div>
+            <div class="skill"><img src="icons/python.png" alt="Python"><p>Python</p></div>
+            <!-- Ajoute ici d'autres compétences -->
+        </div>
+    </section>
+    
+    <!-- FORMATIONS -->
+    <section id="education" class="education section reveal">
+        <h2>Formations</h2>
+        <ul class="timeline">
+            <li><span class="year">2023</span> <div class="content"><strong>Diplôme X</strong> – [Établissement]</div></li>
+            <li><span class="year">2021</span> <div class="content"><strong>Certification Y</strong> – [Organisme]</div></li>
+        </ul>
+    </section>
+    
+    <!-- EXPÉRIENCES -->
+    <section id="experience" class="experience section reveal">
+        <h2>Expériences professionnelles</h2>
+        <ul class="cards">
+            <li class="card">
+                <div class="card-header"><span class="badge">2024</span> <strong>Stage Dev Web</strong></div>
+                <p class="card-body">Chez [Entreprise] – intégration front, composants réactifs, optimisation.</p>
+            </li>
+            <li class="card">
+                <div class="card-header"><span class="badge">2023</span> <strong>Projet étudiant</strong></div>
+                <p class="card-body">Application de veille, recherche d’articles, présentation synthétique.</p>
+            </li>
+        </ul>
+    </section>
+    
+    <!-- PROJETS -->
+    <section id="projects" class="projects section reveal">
+        <h2>Mes projets réalisés</h2>
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="data">Data</button>
+        </div>
+        <div class="projects-grid">
+            <article class="project-card" data-category="web">
+                <div class="project-thumb"><img src="images/projet1.jpg" alt="Projet 1"></div>
+                <div class="project-info">
+                    <h3>Site e-commerce</h3>
+                    <p>Refonte front + panier, responsive.</p>
+                    <a href="#" class="link">Démo</a>
+                    <a href="#" class="link">GitHub</a>
+                </div>
+            </article>
+            <article class="project-card" data-category="mobile">
+                <div class="project-thumb"><img src="images/projet2.jpg" alt="Projet 2"></div>
+                <div class="project-info">
+                    <h3>Application mobile</h3>
+                    <p>Suivi d’activité, notifications.</p>
+                    <a href="#" class="link">Démo</a>
+                    <a href="#" class="link">GitHub</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog">
+        <button class="close" aria-label="Fermer">&times;</button>
+        <img src="" alt="Projet en grand">
+    </div>
+    
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="certifications section reveal">
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+            <li><a href="cnil.pdf" download>MOOC CNIL</a></li>
+            <li><a href="anssi.pdf" download>ANSSI</a></li>
+            <li><a href="pix.pdf" download>PIX</a></li>
+            <li><a href="ecritplus.pdf" download>Écrit+</a></li>
+        </ul>
+    </section>
+    
