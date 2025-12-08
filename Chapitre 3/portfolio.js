@@ -12,6 +12,36 @@ const onScrollHeader = () => { if (window.scrollY > 12) header.classList.add('st
 window.addEventListener('scroll', onScrollHeader);
 onScrollHeader();
 
+// Masquer/afficher le header selon le sens du défilement
+let lastY = window.scrollY;
+const minDelta = 4; // petit seuil pour éviter les clignotements
+const revealAfter = 12; // on montre toujours près du haut
+
+const onScrollHideHeader = () => {
+  const y = window.scrollY;
+  const delta = y - lastY;
+
+  // Toujours visible près du haut
+  if (y <= revealAfter) {
+    header.classList.remove('hide');
+    lastY = y;
+    return;
+  }
+
+  // Si on scrolle vers le bas suffisamment -> cacher
+  if (delta > minDelta) {
+    header.classList.add('hide');
+  }
+  // Si on remonte -> montrer
+  else if (delta < -minDelta) {
+    header.classList.remove('hide');
+  }
+
+  lastY = y;
+};
+
+window.addEventListener('scroll', onScrollHideHeader);
+
 // Menu burger
 const burger = qs('.burger');
 const nav = qs('.site-nav');
@@ -21,18 +51,33 @@ burger.addEventListener('click', () => {
 });
 qsa('.site-nav a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }));
 
-// Scroll fluide
+
+// Scroll fluide amélioré
 qsa('a[href^=#]').forEach(link => {
   link.addEventListener('click', e => {
     const id = link.getAttribute('href');
     if (!id || id === '#') return;
+
     const target = qs(id);
     if (!target) return;
+
+    // Si on est déjà (quasi) au bon endroit, ne rien faire
+    const currentTop = window.pageYOffset;
+    const desiredTop = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight + 6;
+    if (Math.abs(currentTop - desiredTop) < 2) return;
+
     e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.pageYOffset - header.offsetHeight + 6;
-    window.scrollTo({ top, behavior: 'smooth' });
+
+    // Fermer le burger si ouvert (tu le fais aussi ailleurs ; redondance OK)
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      burger && burger.setAttribute('aria-expanded', 'false');
+    }
+
+    window.scrollTo({ top: desiredTop, behavior: 'smooth' });
   });
 });
+
 
 // Scroll spy
 const sections = ['#accueil', '#about', '#skills', '#education', '#experience', '#projects', '#certifications', '#contact', '#veille'];

@@ -1,11 +1,11 @@
 
 /* Variables */
 :root {
-  --bg: #717175;
+  --bg: #0c1b5ee3;
   --text: #ffffff;
   --card: #ffffff;
   --accent: #1b1919;
-  --accent-hover: #555;
+  --accent-hover: #000000;
 }
 
 /* Reset */
@@ -21,7 +21,7 @@ body {
 /* Header */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0;
-  background: rgb(35, 36, 36);
+  background: rgba(35, 36, 36, 0.473);
   display: flex; justify-content: space-between; align-items: center;
   padding: 10px 20px; z-index: 1000;
 }
@@ -32,9 +32,9 @@ body {
 
 /* Hero */
 .hero {
-  height: 80vh;
+  height: 100vh;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  background: url("images/background.jpg") center/cover no-repeat;
+  background: url("1d30b5a0c298c02edaf2f501b22a6587.gif") center/cover no-repeat;
   text-align: center;
 }
 .hero h1 { font-size: 3rem; margin-bottom: 10px; }
@@ -52,4 +52,59 @@ body {
 .section { padding: 50px 20px; }
 h2 { text-align: center; margin-bottom: 20px; }
 
-/* Grilles */
+/* Header – animation d’apparition/disparition */
+.site-header {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+/* Quand on veut le cacher, on le translate vers le haut */
+.site-header.hide {
+  transform: translateY(-100%);
+}
+
+/* Optionnel: style quand collé (tu utilises déjà .sticky côté JS) */
+.site-header.sticky {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  gap: 10px;
+}
+.skill-item {
+  background: var(--card);
+  color: #000000;
+  padding: 10px;
+  border-radius: 1px;
+  text-align: center;
+}
+.skill-item h3 { margin-bottom: 20px; }
+.skill-item p { font-size: 0.9rem; }
+
+/* À propos */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+}
+.about-photo {
+  width: 100%;
+  border-radius: 10px;
+}
+.about-text p { margin-bottom: 15px; }
+.about-stats {
+  list-style: none;
+  display: flex; gap: 20px;
+  margin-bottom: 20px;
+}
+.about-actions .btn {
+  margin-right: 10px;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(1200px, 1fr));
+  gap: 20px;
+}
+
