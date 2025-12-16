@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - BTS SIO</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
     <!-- Police Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -46,8 +46,9 @@
         <div class="container">
             <h2>Qui suis-je ?</h2>
             <div class="about-content">
-                <!-- À COMPLÉTER : Remplacez le texte par votre présentation -->
-                <p>Je suis un étudiant en première année de BTS SIO, passionné par le développement web 
+                <div class="about-text">
+                    <!-- À COMPLÉTER : Remplacez le texte par votre présentation -->
+                    <p>Je suis un étudiant en première année de BTS SIO, passionné par le développement web 
 et les nouvelles technologies. Actuellement, j'apprends les fondamentaux du web 
 (HTML, CSS, JavaScript) et je découvre Python pour l'automatisation et l'analyse de données.
 
@@ -61,20 +62,44 @@ les bonnes pratiques de protection des données, et comment sensibiliser les uti
 
 Je suis motivé, curieux, et je suis toujours à la recherche de nouvelles connaissances 
 pour approfondir mes compétences en sécurité.</p>
-                
-                <h3>Informations personnelles :</h3>
-                <!-- À COMPLÉTER : Mettez vos informations personnelles -->
-                <ul>
-                    <li><strong>Nom :</strong> Sterpione Louca</li>
-                    <li><strong>Date de naissance :</strong> 22/01/2007</li>
-                    <li><strong>Localisation :</strong> Vesoul(70000)</li>
-                    <li><strong>Téléphone :</strong> +33 6 49 46 69 52</li>
-                    <li><strong>Email :</strong> louca.sterpione@orange.fr</li>
-                </ul>
+                    
+                    <h3>Informations personnelles :</h3>
+                    <!-- À COMPLÉTER : Mettez vos informations personnelles -->
+                    <div>
+                        <div class="contact-item-inline">
+                            <span>Nom :</span>
+                            <span>Sterpione Louca</span>
+                        </div>
+                        <div class="contact-item-inline">
+                            <span>Date de naissance :</span>
+                            <span>22/01/2007</span>
+                        </div>
+                        <div class="contact-item-inline">
+                            <span>Localisation :</span>
+                            <span>Vesoul (70000)</span>
+                        </div>
+                        <div class="contact-item-inline">
+                            <div class="contact-icon">📞</div>
+                            <a href="tel:+33649466952" class="contact-link">+33 6 49 46 69 52</a>
+                        </div>
+                        <div class="contact-item-inline">
+                            <div class="contact-icon">📮</div>
+                            <a href="mailto:louca.sterpione@orange.fr" class="contact-link">louca.sterpione@orange.fr</a>
+                        </div>
+                    </div>
 
-                <h3>Intérêts :</h3>
-                <!-- À COMPLÉTER : Mettez vos intérêts -->
-                <p>Développement web • Cybersécurité • Base de données • Gestion de projet</p>
+                    <h3>Intérêts :</h3>
+                    <!-- À COMPLÉTER : Mettez vos intérêts -->
+                    <p>Développement web • Cybersécurité • Base de données • Gestion de projet</p>
+                </div>
+                
+                <div class="about-profile-img">
+                    <img src="unnamed.jpg" alt="Photo de profil">
+                </div>
+                
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2779.3726234567!2d6.5!3d47.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47906ba17d94f1bf%3A0x8e7fa19eaa8bab5b!2sVesoul%2C%20France!5e0!3m2!1sfr!2sfr!4v1702384800000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -95,7 +120,7 @@ pour approfondir mes compétences en sécurité.</p>
                     <img src="hd-python-logo-symbol-transparent-png-735811696257415dbkifcuokn.png" alt="Logo Python">
                     <h4>Python</h4>
                     <!-- À COMPLÉTER : Remplacez "Intermédiaire" par votre niveau : Débutant / Intermédiaire / Avancé -->
-                    <p class="level">Niveau : Intermédiaire</p>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span></p>
                     <!-- À COMPLÉTER : Décrivez vos compétences en Python -->
                     <p class="description">Scripts, analyse de données, gestion de fichiers</p>
                 </div>
@@ -104,7 +129,7 @@ pour approfondir mes compétences en sécurité.</p>
                 <div class="skill-card">
                     <img src="5968267.png" alt="Logo HTML5">
                     <h4>HTML5</h4>
-                    <p class="level">Niveau : Intermédiaire</p>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
                     <p class="description">Structure sémantique, formulaires, accessibilité</p>
                 </div>
 
@@ -112,7 +137,7 @@ pour approfondir mes compétences en sécurité.</p>
                 <div class="skill-card">
                     <img src="CSS3_logo_and_wordmark.svg.png" alt="Logo CSS3">
                     <h4>CSS3</h4>
-                    <p class="level">Niveau : Intermédiaire</p>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
                     <p class="description">Mise en page, animations, responsive design</p>
                 </div>
 
@@ -120,7 +145,7 @@ pour approfondir mes compétences en sécurité.</p>
                 <div class="skill-card">
                     <img src="SQL.png" alt="Logo SQL">
                     <h4>SQL</h4>
-                    <p class="level">Niveau : Débutant</p>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
                     <p class="description">Rêquetes, Base de données</p>
                 </div>
 
@@ -130,18 +155,46 @@ pour approfondir mes compétences en sécurité.</p>
             <h3>Outils et technologies</h3>
             <div class="skills-grid">
                 <!-- À COMPLÉTER : Ajoutez les outils que vous connaissez -->
-                <div class="skill-card">
-                    <img src="25231.png" alt="Logo Git">
-                    <h4>GitHub</h4>
-                    <p class="level">Niveau : Débutant</p>
-                    <p class="description">Versioning, gestion de projets collaboratifs</p>
+                <div class="skill-card flip-card">
+                    <div class="skill-card-front">
+                        <img src="25231.png" alt="Logo Git">
+                        <h4>GitHub</h4>
+                        <p class="level"><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
+                        <p class="description">Versioning, gestion de projets collaboratifs</p>
+                    </div>
+                    <div class="skill-card-back">
+                        <h3 style="color: white; margin: 0 0 1rem 0;">Mon Profil</h3>
+                        <p style="color: rgba(255,255,255,0.9); margin: 0 0 1rem 0;">Retrouvez mon portfolio et mes projets</p>
+                        <a href="https://github.com/LoucaSterpione" target="_blank">Visiter GitHub</a>
+                    </div>
                 </div>
 
                 <div class="skill-card">
                     <img src="Visual_Studio_Code_1.35_icon.svg.png" alt="Logo VS Code">
                     <h4>Visual Studio Code</h4>
-                    <p class="level">Niveau : Intermédiaire</p>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
                     <p class="description">Édition de code, extensions, debug</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Cisco-Packet-Tracer.png" alt="Cisco">
+                    <h4>Cisco Packet Tracer</h4>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
+                    <p class="description">Simulation réseau, configuration routeurs et commutateurs</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="WORD_LOGO.png" alt="Word">
+                    <h4>Word</h4>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
+                    <p class="description">Mise en forme documents, rapports, gestion des styles</p>
+                </div>
+
+                <div class="skill-card">
+                    <img src="Microsoft_Office_Access_(2019-2025).svg.png" alt="Access">
+                    <h4>Access</h4>
+                    <p class="level"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span></p>
+                    <p class="description">Création de bases de données, formulaires et requêtes</p>
                 </div>
 
                 <!-- À COMPLÉTER : Ajoutez SQL, Linux, Cisco, etc. selon vos connaissances -->
@@ -158,10 +211,10 @@ pour approfondir mes compétences en sécurité.</p>
                 <!-- À COMPLÉTER : Ajoutez vos formations -->
                 <div class="timeline-item">
                     <!-- À COMPLÉTER : Remplacez les dates et informations -->
-                    <div class="timeline-date">2023 - 2025</div>
+                    <div class="timeline-date with-image" style="background-image: url('pergaud-paty-1200x766.jpeg')">2025</div>
                     <div class="timeline-content">
                         <h3>BTS Services Informatiques aux Organisations (SIO)</h3>
-                        <p class="institution">Nom de votre lycée/établissement</p>
+                        <p class="institution">Lycée Louis Pergaud</p>
                         <p class="description">
                             Formation en deux ans couvrant :
                             <ul>
@@ -176,11 +229,12 @@ pour approfondir mes compétences en sécurité.</p>
 
                 <!-- À COMPLÉTER : Ajoutez d'autres formations si nécessaire -->
                 <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-date with-image" style="background-image: url('Lycee-vue-generale_03.jpg')">2022 - 2025</div>
                     <div class="timeline-content">
-                        <h3>Baccalauréat Technologique STI2D (ou autre)</h3>
-                        <p class="institution">Nom de votre lycée</p>
-                        <p class="description">Description de votre baccalauréat</p>
+                        <h3>Baccalauréat Générale</h3>
+                        <p class="institution">Lycée Les Haberges</p>
+                        <p class="description">Spécialité Maths (abandonner en Terminale), Numérique et Sciences Informatiques (NSI), 
+                            Histoire-géographie, Géopolitique et Sciences Politiques (HGGSP)</p>
                     </div>
                 </div>
             </div>
@@ -384,7 +438,7 @@ pour approfondir mes compétences en sécurité.</p>
     <footer class="footer">
         <div class="container">
             <!-- À COMPLÉTER : Remplacez "Votre Nom" par votre nom -->
-            <p>&copy; 2024 Votre Nom - Étudiant en BTS SIO. Tous droits réservés.</p>
+            <p>&copy; 2025 STERPIONE Louca - Étudiant en BTS SIO. Tous droits réservés.</p>
             <p>
                 <!-- À COMPLÉTER : Ajoutez vos réseaux sociaux -->
                 <a href="https://linkedin.com/in/votrenprofil" target="_blank">LinkedIn</a> •
@@ -393,6 +447,9 @@ pour approfondir mes compétences en sécurité.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Bouton Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeBtn" title="Basculer le thème sombre">🌙</button>
+
+    <script src="portfolio.js"></script>
 </body>
 </html>

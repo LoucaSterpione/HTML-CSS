@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ===== FONCTION : Animation des éléments au scroll =====
 // À COMPLÉTER : Décommentez si vous voulez activer les animations au scroll
-/*
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -53,7 +53,7 @@ const observer = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });
-*/
+
 
 // ===== FONCTION : Formulaire de contact =====
 // À COMPLÉTER : Configurez ce formulaire pour envoyer les emails
@@ -110,7 +110,7 @@ window.addEventListener('scroll', function() {
 
 // ===== FONCTION : Animation de compteur (optionnel) =====
 // À COMPLÉTER : Décommentez et utilisez cette fonction si vous avez des compteurs
-/*
+
 function animateCounter(element, target, duration = 1000) {
     let start = 0;
     const increment = target / (duration / 16);
@@ -127,31 +127,52 @@ function animateCounter(element, target, duration = 1000) {
 
     updateCounter();
 }
-*/
 
-// ===== FONCTION : Changer de thème clair/sombre (optionnel) =====
-// À COMPLÉTER : Décommentez si vous voulez implémenter un thème sombre
-/*
+
+// ===== FONCTION : Changer de thème clair/sombre =====
 function toggleDarkMode() {
     const body = document.body;
+    const btn = document.getElementById('darkModeBtn');
+    
     body.classList.toggle('dark-mode');
 
-    // Sauvegarde la préférence dans localStorage
+    // Change l'icône du bouton
     if (body.classList.contains('dark-mode')) {
+        btn.textContent = '☀️';
+        btn.title = 'Basculer au thème clair';
         localStorage.setItem('theme', 'dark');
     } else {
+        btn.textContent = '🌙';
+        btn.title = 'Basculer au thème sombre';
         localStorage.setItem('theme', 'light');
     }
 }
 
-// Applique le thème sauvegardé
+// Applique le thème sauvegardé et configure le bouton
 window.addEventListener('DOMContentLoaded', function() {
     const savedTheme = localStorage.getItem('theme');
+    const btn = document.getElementById('darkModeBtn');
+    
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
+        btn.textContent = '☀️';
+        btn.title = 'Basculer au thème clair';
     }
+    
+    // Ajoute l'événement de clic au bouton
+    btn.addEventListener('click', toggleDarkMode);
 });
-*/
+
+// Écoute aussi les changements de préférences système
+if (window.matchMedia) {
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeQuery.addListener((e) => {
+        if (e.matches && !document.body.classList.contains('dark-mode')) {
+            toggleDarkMode();
+        }
+    });
+}
+
 
 // ===== FONCTION : Charger dynamiquement les projets (optionnel) =====
 // À COMPLÉTER : Utilisez cette fonction si vous avez beaucoup de projets
