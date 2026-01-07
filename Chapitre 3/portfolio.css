@@ -1,6 +1,3 @@
-/* ===== STYLES.CSS - PORTFOLIO BTS SIO ===== */
-/* Fichier CSS pour le portfolio d'étudiant en BTS SIO */
-/* À COMPLÉTER : Vous pouvez modifier les couleurs, polices, espacements, etc. */
 
 /* ===== RÉINITIALISATION ===== */
 * {
@@ -9,15 +6,15 @@
     box-sizing: border-box;
 }
 
-/* ===== VARIABLES COULEURS (À PERSONNALISER) ===== */
+/* ===== VARIABLES COULEURS ===== */
 :root {
-    /* À COMPLÉTER : Modifiez les couleurs selon votre préférence */
-    --primary-color: #3498db;        /* Couleur principale (bleu) */
-    --secondary-color: #2ecc71;      /* Couleur secondaire (vert) */
-    --dark-color: #2c3e50;           /* Couleur foncée (gris bleu) */
-    --light-color: #ecf0f1;          /* Couleur claire (gris clair) */
-    --text-color: #333;              /* Couleur du texte */
-    --border-radius: 8px;            /* Arrondi des coins */
+    
+    --primary-color: #3498db;        
+    --secondary-color: #2ecc71;      
+    --dark-color: #30373d;           
+    --light-color: #ffffff;          
+    --text-color: #333;              
+    --border-radius: 8px; 
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,7 +22,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
-    background-color: #f8f9fa;
+    background-color: #c7bfbf;
     line-height: 1.6;
 }
 
@@ -33,15 +30,15 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ===== CONTENEUR ===== */
-.container {
+/* ===== HAUT DE PAGE ===== */
+.contenant {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /* ===== NAVIGATION ===== */
-.navbar {
+.barre-nav {
     background-color: var(--dark-color);
     padding: 1rem 0;
     position: sticky;
@@ -50,7 +47,7 @@ html {
     box-shadow: var(--shadow);
 }
 
-.nav-container {
+.nav-contenant {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,49 +76,37 @@ html {
     color: var(--primary-color);
 }
 
-/* ===== RESPONSIVE NAVIGATION ===== */
-@media (max-width: 768px) {
-    .nav-menu {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-    
-    .logo h1 {
-        font-size: 1.4rem;
-    }
-}
-
-/* ===== SECTION HÉRO (ACCUEIL) ===== */
-.hero {
+/* ===== ACCUEIL ===== */
+.accueil {
     background: linear-gradient(135deg, rgba(52, 152, 219, 0.85) 0%, rgba(44, 62, 80, 0.85) 100%), url('1d30b5a0c298c02edaf2f501b22a6587.gif');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-    color: white;
-    padding: 100px 20px;
+    color: #fafafa;
+    padding: 300px 20px;
     text-align: center;
 }
 
-.hero h2 {
+.accueil h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: slideDown 0.6s ease;
 }
 
-.hero p {
+.accueil p {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
-.hero .subtitle {
+.accueil .sous-titre {
     font-size: 1.1rem;
     color: var(--light-color);
     margin-bottom: 2rem;
 }
 
 /* ===== BOUTONS ===== */
-.btn {
+.bouton {
     display: inline-block;
     padding: 12px 30px;
     border-radius: var(--border-radius);
@@ -132,26 +117,17 @@ html {
     cursor: pointer;
 }
 
-.btn-primary {
+.bouton-primaire {
     background-color: var(--primary-color);
-    color: white;
+    color: #fafafa;
 }
 
-.btn-primary:hover {
+.bouton-primaire:hover {
     background-color: #2980b9;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btn-secondary {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: #27ae60;
-    transform: translateY(-2px);
-}
 
 /* ===== SECTIONS GÉNÉRALES ===== */
 section {
@@ -186,42 +162,42 @@ section h3 {
 }
 
 /* ===== SECTION À PROPOS ===== */
-.about {
-    background-color: white;
+.a-propos {
+    background-color: #c7bfbf;
 }
 
-.about-content p {
+.a-propos-contenu p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
-.about-content ul {
+.a-propos-contenu ul {
     list-style: none;
     margin-bottom: 2rem;
 }
 
-.about-content li {
+.a-propos-contenu li {
     padding: 0.5rem 0;
     font-size: 1.05rem;
 }
 
-.about-content {
+.a-propos-contenu {
     position: relative;
 }
 
-.about-text {
+.a-propos-texte {
     padding-right: 300px;
 }
 
-.about-profile-img {
+.a-propos-profil-img {
     position: absolute;
     top: 0;
     right: 0;
     width: 280px;
 }
 
-.about-profile-img img {
+.a-propos-profil-img img {
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -259,7 +235,7 @@ section h3 {
     text-decoration: underline;
 }
 
-.about-text {
+.a-propos-text {
     padding-right: 380px;
 }
 
@@ -283,7 +259,7 @@ section h3 {
 
 /* ===== SECTION COMPÉTENCES ===== */
 .skills {
-    background-color: #f8f9fa;
+    background-color: #c7bfbf;
 }
 
 .skills-grid {
@@ -294,7 +270,7 @@ section h3 {
 }
 
 .skill-card {
-    background-color: white;
+    background-color: #fafafa;
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
@@ -311,15 +287,12 @@ section h3 {
 .skill-card.flip-card {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 400px;
     transform-style: preserve-3d;
     transition: transform 0.6s;
     padding: 0;
 }
 
-.skill-card.flip-card:hover {
-    transform: rotateY(180deg);
-}
 
 .skill-card-front,
 .skill-card-back {
@@ -336,7 +309,7 @@ section h3 {
 }
 
 .skill-card-front {
-    background-color: white;
+    background-color: #fafafa;
     box-shadow: var(--shadow);
 }
 
@@ -347,21 +320,9 @@ section h3 {
     box-shadow: var(--shadow);
 }
 
-.skill-card-back a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    border: 2px solid white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-top: 1rem;
-}
 
 .skill-card-back a:hover {
-    background-color: white;
+    background-color: #fafafa;
     color: #3498db;
 }
 
@@ -435,7 +396,7 @@ section h3 {
 .timeline-date {
     width: 30%;
     background-color: var(--primary-color);
-    color: white;
+    color: #fafafa;
     padding: 1rem;
     border-radius: var(--border-radius);
     font-weight: 600;
@@ -451,42 +412,42 @@ section h3 {
     background-blend-mode: overlay;
 }
 
-.timeline-content {
+.timeline-contenu {
     width: 70%;
-    background-color: white;
+    background-color: #fafafa;
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
 
-.timeline-content h3 {
+.timeline-contenu h3 {
     margin-top: 0;
     color: var(--dark-color);
 }
 
-.timeline-content .institution {
+.timeline-contenu .institution {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.timeline-content .description {
+.timeline-contenu .description {
     color: #666;
     line-height: 1.8;
 }
 
-.timeline-content ul {
+.timeline-contenu ul {
     margin: 1rem 0 0 1.5rem;
     list-style-type: disc;
 }
 
-.timeline-content li {
+.timeline-contenu li {
     margin-bottom: 0.5rem;
 }
 
 /* ===== SECTION PROJETS ===== */
 .projects {
-    background-color: white;
+    background-color: #c7bfbf;
 }
 
 .projects-grid {
@@ -496,7 +457,7 @@ section h3 {
 }
 
 .project-card {
-    background-color: white;
+    background-color: #fafafa;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -537,7 +498,7 @@ section h3 {
 
 /* ===== SECTION CERTIFICATIONS ===== */
 .certifications {
-    background-color: #f8f9fa;
+    background-color: #c7bfbf;
 }
 
 .certifications-grid {
@@ -547,7 +508,7 @@ section h3 {
 }
 
 .cert-card {
-    background-color: white;
+    background-color: #fafafa;
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -571,7 +532,7 @@ section h3 {
 
 /* ===== SECTION VEILLE INFORMATIQUE ===== */
 .watch {
-    background-color: white;
+    background-color: #c7bfbf;
 }
 
 .watch-grid {
@@ -581,7 +542,7 @@ section h3 {
 }
 
 .watch-item {
-    background-color: #f8f9fa;
+    background-color: #f5f5f5;
     padding: 2rem;
     border-radius: var(--border-radius);
     border-top: 4px solid var(--primary-color);
@@ -605,7 +566,7 @@ section h3 {
 
 /* ===== SECTION CONTACT ===== */
 .contact {
-    background-color: white;
+    background-color: #c7bfbf;
 }
 
 .contact-info {
@@ -618,7 +579,7 @@ section h3 {
 .contact-item {
     text-align: center;
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: #f5f5f5;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
@@ -644,7 +605,7 @@ section h3 {
     max-width: 600px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: #f5f5f5;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
@@ -746,15 +707,15 @@ body.dark-mode section h3 {
     color: #e0e0e0;
 }
 
-body.dark-mode .about {
+body.dark-mode .a-propos {
     background-color: #1a1a1a;
 }
 
-body.dark-mode .about-content p {
+body.dark-mode .a-propos-contenu p {
     color: #d0d0d0;
 }
 
-body.dark-mode .about-content ul {
+body.dark-mode .a-propos-contenu ul {
     color: #d0d0d0;
 }
 
@@ -801,24 +762,24 @@ body.dark-mode .timeline-date {
     color: #e0e0e0;
 }
 
-body.dark-mode .timeline-content {
+body.dark-mode .timeline-contenu {
     background-color: #1a1a1a;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-body.dark-mode .timeline-content h3 {
+body.dark-mode .timeline-contenu h3 {
     color: #e0e0e0;
 }
 
-body.dark-mode .timeline-content .institution {
+body.dark-mode .timeline-contenu .institution {
     color: #64b5f6;
 }
 
-body.dark-mode .timeline-content .description {
+body.dark-mode .timeline-contenu .description {
     color: #b0b0b0;
 }
 
-body.dark-mode .timeline-content li {
+body.dark-mode .timeline-contenu li {
     color: #b0b0b0;
 }
 
@@ -937,25 +898,6 @@ body.dark-mode .footer a:hover {
     color: #90caf9;
 }
 
-/* Bouton dark mode toggle */
-.dark-mode-toggle {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    z-index: 999;
-}
 
 .dark-mode-toggle:hover {
     transform: scale(1.1);
@@ -1011,7 +953,7 @@ body.dark-mode .dark-mode-toggle {
         width: 100%;
     }
 
-    .timeline-content {
+    .timeline-contenu {
         width: 100%;
     }
 
