@@ -78,7 +78,7 @@ html {
 
 /* ===== ACCUEIL ===== */
 .accueil {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.85) 0%, rgba(44, 62, 80, 0.85) 100%), url('1d30b5a0c298c02edaf2f501b22a6587.gif');
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.85) 0%, rgba(44, 62, 80, 0.85) 100%), url('img/gif.gif');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -691,7 +691,7 @@ body.dark-mode .nav-menu a:hover {
 }
 
 body.dark-mode .hero {
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.7) 0%, rgba(20, 30, 45, 0.9) 100%), url('1d30b5a0c298c02edaf2f501b22a6587.gif');
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.7) 0%, rgba(20, 30, 45, 0.9) 100%), url('img/gif.gif');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
